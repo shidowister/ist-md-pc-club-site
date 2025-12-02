@@ -9,3 +9,8 @@ theme = 'PaperMod'
     name = "部について"
     url = "/about/"
     weight = 10
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
