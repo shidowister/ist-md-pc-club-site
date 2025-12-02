@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>東京科学大学　お茶の水コンピュータ部</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on 東京科学大学　お茶の水コンピュータ部</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Dec 2025 12:00:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【ジャンク再生計画 Vol.1】予算11万円でPS5 proに勝つ！現状編</title>
+      <link>http://localhost:1313/posts/01-parts-selection/</link>
+      <pubDate>Tue, 02 Dec 2025 12:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/posts/01-parts-selection/</guid>
+      <description>&lt;p&gt;部員sが某所から貰ってきた5年落ちのワークステーション。
+もともと業務用のミドルクラス機なので電源や拡張性など、ポテンシャルはあります。
+このマシンのパーツを換装して、低価格でハイスペpcを目指します！&lt;/p&gt;
+&lt;h2 id=&#34;今回のコンセプト&#34;&gt;今回のコンセプト&lt;/h2&gt;
+&lt;p&gt;ただ組むだけじゃ面白くない。今回のテーマはps5 pro以下の費用で、ps5 pro以上のスペック、汎用性です。&lt;/p&gt;
+&lt;h2 id=&#34;現状のpcの紹介&#34;&gt;現状のpcの紹介&lt;/h2&gt;
+&lt;h3 id=&#34;1-本体&#34;&gt;1. 本体&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;本体の外観&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/Z4G4_normal.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;HP社の業務用ワークステーション Z4G4 法人向けとしてはエントリーミドルクラスで、発売当時の新品価格は構成にもよるが、30万から40万ほど。
+ワークステーションのためcpuはxeonシリーズを使用し、gpuもquadroシリーズ、メモリもECCメモリを採用。
+電源や内部スペースには余裕がある。&lt;/p&gt;
+&lt;h3 id=&#34;2-cpu-xeon-w-2102&#34;&gt;2. cpu: [xeon w-2102]&lt;/h3&gt;
+&lt;p&gt;Z4g4で選べる最小構成のcpu。
+2017年発売。流石に厳しい。
+14nmプロセスの、4コア 4スレッドのモデル。性能は高いとは言えないが、xeonシリーズだけあって最大メモリは512GBまで対応。
+性能的にはi5-7400より少し低いぐらい。　およそ現代のゲームには向かない。&lt;/p&gt;
+&lt;h3 id=&#34;3-gpu-quadro-p620&#34;&gt;3. gpu: [quadro p620]&lt;/h3&gt;
+&lt;p&gt;ワークステーション用のquadroシリーズ。
+TDPは40W。VRAMは2GB、ロープロ対応で、４系統のMini DisplayPortで4画面同時出力ができる。
+ゲーミング性のはGTX950より少し低いぐらい。
+現代のゲームには向かないが、通常のビデオカードとしてみればロープロで発熱も少なく優秀と言える。&lt;/p&gt;
+&lt;h3 id=&#34;4-電源&#34;&gt;4. 電源&lt;/h3&gt;
+&lt;p&gt;HPの専用品。750Wで多分80 plus gold。
+一応ATX規格らしいが、他のマザボで使えるのかは不明。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;次回、換装パーツの選定編。そもそもどんなパーツが使えるのか、どれぐらいアップデートできるのか!?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ホームページを開設しました</title>
+      <link>http://localhost:1313/posts/00-website-open/</link>
+      <pubDate>Mon, 01 Dec 2025 12:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/posts/00-website-open/</guid>
+      <description>&lt;p&gt;東京科学大学 お茶の水コンピュータ部の公式サイトを開設しました。&lt;/p&gt;
+&lt;p&gt;これまでは部室内での活動がメインでしたが、今後は外部に向けて活動実績を発信していきます。
+主にハードウェアの制作記録や、技術的な検証レポートを掲載していく予定です。&lt;/p&gt;
+&lt;p&gt;現在、部員が貰ってきたワークステーションの再生プロジェクトが進行中です。
+近いうちに記事をアップしていきますので、ご期待ください。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>部について</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>about</description>
+    </item>
+  </channel>
+</rss>

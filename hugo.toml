@@ -1,0 +1,11 @@
+baseURL = 'https://shidowister.github.io/pc-club-site/'
+languageCode = 'en-us'
+title = '東京科学大学　お茶の水コンピュータ部'
+theme = 'PaperMod'
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "部について"
+    url = "/about/"
+    weight = 10
