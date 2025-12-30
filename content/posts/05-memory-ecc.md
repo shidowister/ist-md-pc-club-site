@@ -55,7 +55,7 @@ CPU、GPUときて、今回は **「メモリ」** です。
 
 というわけで、今回確保したメモリがこちら。
 
-![Sk hynix DDR4 ECC RDIMM](/ist-md-pc-club-site/images/ecc-memory.PNG)
+![Sk hynix DDR4 ECC RDIMM](/ist-md-pc-club-site/images/ecc-memory.jpeg)
 
 **Sk hynix製 DDR4-2666V ECC RDIMM 8GB × 3枚 = 24GB**
 
@@ -75,7 +75,7 @@ CPU、GPUときて、今回は **「メモリ」** です。
 
 では早速装着していきましょう。
 
-![memory install](/ist-md-pc-club-site/images/memory-exchange.PNG)
+![memory install](/ist-md-pc-club-site/images/memory-exchange.jpeg)
 
 普通のPCで40GB積もうと思ったら3万円コースですが、サーバー用なら半額以下で揃ったりします。
 
