@@ -3,6 +3,8 @@ title: "【ジャンク再生計画 Vol.2】LGA2066の罠とXeon選定のロジ�
 date: 2025-12-08T18:00:00+09:00
 draft: false
 author: ["S藤"]
+categories: ["自作PC", "ジャンク再生"]
+tags: ["Xeon", "LGA2066", "CPU換装","w-2235"]
 ---
 
 前回紹介したベースマシン「HP Z4 G4」。
