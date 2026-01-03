@@ -5,6 +5,7 @@ draft: false
 author: ["S藤"]
 categories: ["自作PC", "ジャンク再生"]
 tags: ["HP Z4 G4", "メモリ", "ECC", "サーバー"]
+comments: true
 ---
 
 CPU、GPUときて、今回は **「メモリ」** です。
