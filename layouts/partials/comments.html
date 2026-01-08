@@ -2,37 +2,38 @@
 
 <script>
     // -------------------------------------------------------------------
-    // 1. 【初期表示用】 保存された設定から正しいテーマを取得する関数
+    // 1. 【初期設定】 ページを開いた瞬間の色を決める
     // -------------------------------------------------------------------
     function getInitialTheme() {
-        const localTheme = localStorage.getItem("pref-theme");
-        if (localTheme === "dark") return "dark";
-        if (localTheme === "light") return "light";
+        // PaperModは localStorage に設定を保存しています
+        const storedTheme = localStorage.getItem("pref-theme");
+        
+        if (storedTheme === "dark") return "dark";
+        if (storedTheme === "light") return "light";
+        
+        // 設定がない場合はOSの設定に従う
         return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     }
 
     // -------------------------------------------------------------------
-    // 2. 【切り替え用】 Giscusに新しいテーマを通知する関数
+    // 2. 【変更命令】 Giscusに「色を変えろ」と命令を送る関数
     // -------------------------------------------------------------------
-    function updateGiscusTheme() {
+    function setGiscusTheme(theme) {
         const iframe = document.querySelector('iframe.giscus-frame');
         if (!iframe) return;
 
-        // 現在の画面の状態（bodyタグのclass）を見て、darkかlightかを決める
-        const theme = document.body.classList.contains('dark') ? 'dark' : 'light';
-
-        // Giscusにメッセージを送信
-        iframe.contentWindow.postMessage({
-            giscus: {
-                setConfig: {
-                    theme: theme
-                }
+        const message = {
+            setConfig: {
+                theme: theme
             }
-        }, 'https://giscus.app');
+        };
+        
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        console.log("Giscus theme updated to:", theme); // デバッグ用ログ
     }
 
     // -------------------------------------------------------------------
-    // 3. Giscus本体の読み込み（初期テーマをセットして開始）
+    // 3. Giscus本体の読み込み
     // -------------------------------------------------------------------
     const giscusConfig = {
         repo: "shidowister/ist-md-pc-club-site",
@@ -48,30 +49,42 @@
 
     const giscusScript = document.createElement("script");
     giscusScript.src = "https://giscus.app/client.js";
+    
+    // 設定を流し込む
     Object.keys(giscusConfig).forEach(key => {
         giscusScript.setAttribute("data-" + key.replace(/([A-Z])/g, "-$1").toLowerCase(), giscusConfig[key]);
     });
-    // ★ここで初期テーマを適用（再読み込み時のズレ防止）
+    
+    // ★重要：初期テーマを確実にセットする
     giscusScript.setAttribute("data-theme", getInitialTheme());
     giscusScript.crossOrigin = "anonymous";
     giscusScript.async = true;
+    
     document.querySelector(".giscus").appendChild(giscusScript);
 
-
     // -------------------------------------------------------------------
-    // 4. テーマ変更の検知（ここを強化しました）
+    // 4. 【連動機能】 ボタンクリックだけをシンプルに監視
     // -------------------------------------------------------------------
+    const themeToggle = document.querySelector('#theme-toggle');
     
-    // 【作戦A】 画面のクラスが変わったら即座に更新を実行
-    const observer = new MutationObserver(updateGiscusTheme);
-    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-
-    // 【作戦B】 テーマ切り替えボタン（#theme-toggle）がクリックされたら念押しで実行
-    const themeToggle = document.querySelector("#theme-toggle");
     if (themeToggle) {
-        themeToggle.addEventListener("click", function() {
-            // クラスの切り替えが終わるのを一瞬待ってから実行
-            setTimeout(updateGiscusTheme, 50);
+        themeToggle.addEventListener('click', () => {
+            // PaperModが色を切り替えるのを0.1秒だけ待つ
+            setTimeout(() => {
+                const currentTheme = document.body.classList.contains('dark') ? 'dark' : 'light';
+                setGiscusTheme(currentTheme);
+            }, 100); 
         });
     }
+
+    // -------------------------------------------------------------------
+    // 5. 【念押し】 Giscusから「準備できたよ」と返事が来たら同期する
+    // -------------------------------------------------------------------
+    window.addEventListener('message', (event) => {
+        if (event.origin === 'https://giscus.app') {
+            const currentTheme = document.body.classList.contains('dark') ? 'dark' : 'light';
+            setGiscusTheme(currentTheme);
+        }
+    });
+
 </script>
