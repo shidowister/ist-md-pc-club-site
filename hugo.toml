@@ -29,6 +29,9 @@ theme = 'PaperMod'
   description = "東京科学大学（旧 東京工業大学・東京医科歯科大学）お茶の水コンピュータ部の公式サイトです。活動報告、部員紹介、自作PC、電子工作などの情報を発信しています。"
   keywords = ["東京科学大学", "お茶の水", "医科歯科", "コンピュータ部", "パソコン部", "自作PC", "Institute of Science Tokyo"]
   author = "お茶の水コンピュータ部"
+  
+  [params.assets]
+    css = ["css/custom.css"]
 
   [params.homeInfoParams]
    Title = "活動記録"
