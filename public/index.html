@@ -72,7 +72,43 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script>
+</script><style>
+     
+    
+     
+    .post-content a {
+        color: #003399;  
+    }
+    
+     
+    .post-content strong {
+        font-weight: bold;
+         
+        background: linear-gradient(transparent 60%, #ffff99 60%);
+        padding: 0 2px;
+        color: inherit;
+    }
+
+     
+    
+     
+    
+     
+    body.dark .post-content a {
+        color: #33ccff !important;
+    }
+    
+     
+    body.dark .post-content strong {
+        background: linear-gradient(transparent 60%, #005f73 60%) !important;
+    }
+
+     
+     
+    .post-content a:hover {
+        text-decoration: underline;
+    }
+</style>
 </head>
 <body class="list" id="top">
     <header class="header">
