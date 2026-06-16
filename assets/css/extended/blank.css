@@ -1,0 +1,16 @@
+/* ========================================================
+   最新PaperMod用：ヘッダー強制中央配置ハック
+   ======================================================== */
+
+.header {
+    /* 画面の横幅いっぱいに広がるのをやめ、記事本文と同じ幅に制限する */
+    max-width: calc(var(--main-width) + var(--gap) * 2) !important;
+    
+    /* 左右の余白を「自動（auto）」にすることで、強制的に画面の真ん中に寄せる */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+    /* 左端にピタッと張り付いていた余白をリセットする */
+    padding-left: var(--gap) !important;
+    padding-right: var(--gap) !important;
+}
