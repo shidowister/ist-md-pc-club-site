@@ -36,7 +36,7 @@ HPの専用品。750Wで多分80 plus gold。
 次回、換装パーツの選定編。そもそもどんなパーツが使えるのか、どれぐらいアップデートできるのか!?">
 <meta name="author" content="S藤">
 <link rel="canonical" href="http://localhost:1313/ist-md-pc-club-site/posts/01-parts-selection/">
-<link crossorigin="anonymous" href="/ist-md-pc-club-site/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/ist-md-pc-club-site/assets/css/stylesheet.6ff46447b1fa3f8a5cc0bcae48088decc3ae37f5fbc99406a3aefc3bf0e6044a.css" integrity="sha256-b/RkR7H6P4pcwLyuSAiN7MOuN/X7yZQGo678O/DmBEo=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/ist-md-pc-club-site/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/ist-md-pc-club-site/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/ist-md-pc-club-site/favicon-32x32.png">
@@ -77,12 +77,6 @@ HPの専用品。750Wで多分80 plus gold。
             }
         }
 
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
     </style>
 </noscript>
 <script>
@@ -96,43 +90,7 @@ HPの専用品。750Wで多分80 plus gold。
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><style>
-     
-    
-     
-    .post-content a {
-        color: #003399;  
-    }
-    
-     
-    .post-content strong {
-        font-weight: bold;
-         
-        background: linear-gradient(transparent 60%, #ffff99 60%);
-        padding: 0 2px;
-        color: inherit;
-    }
-
-     
-    
-     
-    
-     
-    body.dark .post-content a {
-        color: #33ccff !important;
-    }
-    
-     
-    body.dark .post-content strong {
-        background: linear-gradient(transparent 60%, #005f73 60%) !important;
-    }
-
-     
-     
-    .post-content a:hover {
-        text-decoration: underline;
-    }
-</style>
+</script>
 </head>
 <body id="top">
     <header class="header">
@@ -188,7 +146,7 @@ HPの専用品。750Wで多分80 plus gold。
 
 </div>
   </header> 
-  <div class="post-content"><p>部員S藤が某所から貰ってきた5年落ちのワークステーション。<br>
+  <div class="post-content md-content"><p>部員S藤が某所から貰ってきた5年落ちのワークステーション。<br>
 もともと業務用のミドルクラス機なので電源や拡張性など、ポテンシャルはあります。<br>
 このマシンのパーツを換装して、低価格でハイスペpcを目指します！</p>
 <h2 id="今回のコンセプト">今回のコンセプト<a hidden class="anchor" aria-hidden="true" href="#今回のコンセプト">#</a></h2>
@@ -308,15 +266,19 @@ TDPは40W。VRAMは2GB、ロープロ対応で、４系統のMini DisplayPortで
 <footer class="footer">
         <span>&copy; 2026 <a href="http://localhost:1313/ist-md-pc-club-site/">東京科学大学　お茶の水コンピュータ部</a></span> · 
 
+    
+    
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
 </a>
 
@@ -355,14 +317,13 @@ TDPは40W。VRAMは2GB、ロープロ対応で、４系統のMini DisplayPortで
 
 </script>
 <script>
-    var mybutton = document.getElementById("top-link");
+    var toplink = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
         } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
+            toplink.classList.add("hidden");
         }
     };
 
