@@ -1,16 +1,42 @@
 /* ========================================================
-   最新PaperMod用：ヘッダー強制中央配置ハック
+   色反転の修正版：テキストをCSS側で2行に強制分離するハック
    ======================================================== */
 
+/* 1. ヘッダー全体の余白をキープ */
 .header {
-    /* 画面の横幅いっぱいに広がるのをやめ、記事本文と同じ幅に制限する */
-    max-width: calc(var(--main-width) + var(--gap) * 2) !important;
-    
-    /* 左右の余白を「自動（auto）」にすることで、強制的に画面の真ん中に寄せる */
-    margin-left: auto !important;
-    margin-right: auto !important;
-    
-    /* 左端にピタッと張り付いていた余白をリセットする */
-    padding-left: var(--gap) !important;
-    padding-right: var(--gap) !important;
+    padding-top: 30px !important;
+    padding-bottom: 20px !important;
+}
+
+/* 2. 元の1行テキストを画面から「非表示」にする */
+.logo a {
+    font-size: 0 !important;
+    line-height: 0 !important;
+    display: block !important;
+}
+
+/* 3. CSSの力で「1行目」を強制的に作り出す */
+.logo a::before {
+    content: "東京科学大学" !important;
+    display: block !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    color: var(--primary) !important; /* ★ここを --primary に修正！ */
+}
+
+/* 4. CSSの力で「2行目」を強制的に作り出す */
+.logo a::after {
+    content: "お茶の水コンピュータ部" !important;
+    display: block !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    color: var(--primary) !important; /* ★ここを --primary に修正！ */
+    margin-top: 4px !important;
+}
+
+/* モバイル画面などでの調整用お守り */
+.logo-switches {
+    margin-left: 15px !important;
 }
