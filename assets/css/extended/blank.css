@@ -40,3 +40,24 @@
 .logo-switches {
     margin-left: 15px !important;
 }
+/* ========================================================
+   学友会対策：CSSだけで活動記録の上に警告文を強制挿入するハック
+   ======================================================== */
+
+.first-entry.home-info::after {
+    content: "⚠️ 【重要】システム移行に伴う表示不具合のお知らせ\A\A現在、環境移行に伴うビルドエラーにより、一部の記事および最新の部員紹介データが正常に本番環境へ反映されない不具合が発生しております。\Aただいま原因の調査およびデータの復旧作業を行っており、以下のコンテンツに関しては検証が完了次第、順次公開（復旧）を予定しております。閲覧の皆様にはご不便をおかけしますが、今しばらくお待ちください。\A\A・『ジャンク再生計画 Vol.5 その他パーツ編』\A・『ジャンク再生計画 Vol.6 最終回 ベンチマークテスト編』\A・『新入生募集！コンピュータ部へようこそ！』\A・『部員紹介（2026年度最新版）』" !important;
+    
+    /* 警告ボックスの見た目作り */
+    display: block !important;
+    white-space: pre-wrap !important; /* \A での改行を有効にする */
+    background-color: rgba(255, 193, 7, 0.1) !important;
+    border-left: 5px solid #ffc107 !important;
+    padding: 15px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    border-radius: 4px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    color: var(--primary) !important;
+    text-align: left !important;
+}
